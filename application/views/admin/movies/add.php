@@ -3,63 +3,18 @@
    #information::-webkit-input-placeholder { /* Chrome/Opera/Safari */
         color: white;
     }
-    .switch {
-        position: relative;
-        display: inline-block;
-        width: 60px;
-        height: 34px;
+    
+    .btn-color{
+        background-color: #b3d4fc;
     }
-    .switch input { 
-        opacity: 0;
-        width: 0;
-        height: 0;
+    a 
+    {
+        color: black;
     }
-    .slider {
-        position: absolute;
-        cursor: pointer;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #ccc;
-        -webkit-transition: .4s;
-        transition: .4s;
+    label.error{
+        color: red;
     }
 
-    .slider:before {
-        position: absolute;
-        content: "";
-        height: 26px;
-        width: 26px;
-        left: 4px;
-        bottom: 4px;
-        background-color: white;
-        -webkit-transition: .4s;
-        transition: .4s;
-    }
-
-    input:checked + .slider {
-        background-color: #2196F3;
-    }
-
-    input:focus + .slider {
-        box-shadow: 0 0 1px #2196F3;
-    }
-
-    input:checked + .slider:before {
-        -webkit-transform: translateX(26px);
-        -ms-transform: translateX(26px);
-        transform: translateX(26px);
-    }
-
-/* Rounded sliders */
-    .slider.round {
-        border-radius: 34px;
-    }
-
-    .slider.round:before {
-        border-radius: 50%;
-    }
 
 </style>
             <div class="breadcome-area">
@@ -79,18 +34,17 @@
 											</div>
 										</div>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                        <div class="breadcomb-report">
-											<button data-toggle="tooltip" data-placement="left" title="Download Report" class="btn"><i class="icon nalika-download"></i></button>
-										</div>
-                                    </div>
+                                  
                                 </div>
                             </div>
                         </div>
                     </div>
+                     <a href="<?php echo base_url('admin/movies'); ?>" class="btn-hover-color"><button type="button" class="btn bg-teal-400 btn-labeled btn-rounded btn-color"><b><i class="fa fa-arrow-left" aria-hidden="true" ></i></b> Back</button></a>
+                    
                 </div>
+
             </div>
-      
+            <br>
         <!-- Single pro tab start-->
         <div class="single-product-tab-area mg-b-30">
             <!-- Single pro tab review Start-->
@@ -103,96 +57,101 @@
                                 <div id="myTabContent" class="tab-content custom-product-edit">
                                     <div class="product-tab-list tab-pane fade active in" id="description">
                                         <div class="row">
-                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                <div class="review-content-section">
-                                                    <div class="input-group mg-b-pro-edt">
-                                                        <span class="input-group-addon"><i class="icon nalika-picture" aria-hidden="true"></i></span>
-                                                        <input type="file" class="form-control" name="image" id="image">
-                                                    </div>
-                                                    <div class="input-group mg-b-pro-edt">
-                                                        <span class="input-group-addon"><i class=" fa fa-film icon-wrap" aria-hidden="true"></i></span>
-                                                        <input type="text" class="form-control" placeholder="Movie Title" name="title" id="title" autocomplete="off">
-                                                    </div>
-                                                    <div class="input-group">
-                                                         <span class="input-group-addon"><i class="icon nalika-like" aria-hidden="true"></i></span>
-                                                        <select name="category" class="form-control pro-edt-select form-control-primary">
-                                                                    <option value="">Select Category</option>
-                                                                    <option value="Bollywood">Bollywood</option>
-                                                                    <option value="Hollywood">Hollywood</option>
-                                                                    <option value="Tollywood">Tollywood</option>
-                                                                  
-                                                        </select>
-                                                    </div>
-                                                    <br>
-                                                     <div class="input-group">
-                                                         <span class="input-group-addon"><i class="fa fa-star-o" aria-hidden="true"></i></span>
-                                                        <select name="genres" class="form-control pro-edt-select form-control-primary">
-                                                                    <option value="">Select Genres</option>
-                                                                    <option value="Action">Action</option>
-                                                                    <option value="Drama">Drama</option>
-                                                                    <option value="Biography">Biography</option>
-                                                                    <option value="Comedy">Comedy</option>
-                                                                    <option value="Horror">Horror</option>
-                                                                    <option value="Romantic">Romantic</option>
-                                                                  
-                                                        </select>
-                                                    </div>
-                                                    <br>
-                                                  
-                                                     <div class="input-group mg-b-pro-edt">
-                                                        <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
-                                                        <input type="text" class="form-control" placeholder="Director Name" name="director" id="director" autocomplete="off">
-                                                    </div>
-                                                   
-                                                  
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                <div class="review-content-section">
-                                                    <div class="input-group mg-b-pro-edt">
-                                                        <span class="input-group-addon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
-                                                        <input type="number" class="form-control" placeholder="Duration In Minutes" name="duration" id="duration" autocomplete="off">
-                                                    </div>
-                                                    <div class="input-group date">
-                                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                                                         <input type="date" class="form-control" name="release_date" id="release_date">
-                                                    </div>
-                                                    <br>
-
-                                                    <div class="input-group mg-b-pro-edt">
-                                                        <span class="input-group-addon"><i class="fa fa-info" aria-hidden="true"></i></span>
-                                                        <textarea name="information" class="form-control" placeholder="Movie Information" id="information" rows="4"></textarea>
-                                                    </div>
-
-                                                 
-
-                                                    <div class="input-group mg-b-pro-edt">
-                                                        <div class="form-group">
-                                                            <label style="color:white; position: relative; top: 7px; font-size: 15px;">Status:</label>&nbsp;
-                                                            <label class="switch"> 
-                                                                <input type="checkbox" name="status" id="status">
-                                                                <span class="slider round"></span>
-                                                            </label>
+                                            <form method="post" name="add_movie" action="<?php echo base_url('admin/movies/add')?>" enctype="multipart/form-data" id="add_form">
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="review-content-section">
+                                                        <div class="input-group mg-b-pro-edt">
+                                                            <span class="input-group-addon"><i class="icon nalika-picture" aria-hidden="true"></i></span>
+                                                            <input type="file" class="form-control" name="image" id="image" data-toggle="tooltip" data-placement="bottom" title="Select Movie Image">
                                                         </div>
+                                                        <div class="input-group mg-b-pro-edt">
+                                                            <span class="input-group-addon"><i class=" fa fa-film icon-wrap" aria-hidden="true"></i></span>
+                                                            <input type="text" class="form-control" placeholder="Movie Title" name="title" id="title" autocomplete="off"  data-toggle="tooltip" data-placement="bottom" title=" Movie Title">
+                                                        </div>
+                                                        <div class="input-group">
+                                                             <span class="input-group-addon"><i class="icon nalika-like" aria-hidden="true"></i></span>
+                                                            <select name="category" class="form-control pro-edt-select form-control-primary" data-toggle="tooltip" data-placement="bottom" title="Select Movie Category">
+                                                                        <option value="">Select Category</option>
+                                                                        <option value="Bollywood">Bollywood</option>
+                                                                        <option value="Hollywood">Hollywood</option>
+                                                                        <option value="Tollywood">Tollywood</option>
+                                                                      
+                                                            </select>
+                                                        </div>
+                                                        <br>
+                                                         <div class="input-group">
+                                                             <span class="input-group-addon"><i class="fa fa-star-o" aria-hidden="true"></i></span>
+                                                            <select name="genres" class="form-control pro-edt-select form-control-primary" data-toggle="tooltip" data-placement="bottom" title="Select Movie Geners">
+                                                                        <option value="">Select Genres</option>
+                                                                        <option value="Action">Action</option>
+                                                                        <option value="Drama">Drama</option>
+                                                                        <option value="Biography">Biography</option>
+                                                                        <option value="Comedy">Comedy</option>
+                                                                        <option value="Horror">Horror</option>
+                                                                        <option value="Romantic">Romantic</option>
+                                                                      
+                                                            </select>
+                                                        </div>
+                                                        <br>
+                                                      
+                                                        
+                                                       
+                                                      
                                                     </div>
-                                                                                   
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="review-content-section">
+                                                         <div class="input-group mg-b-pro-edt">
+                                                            <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                                                            <input type="text" class="form-control" placeholder="Director Name" name="director" id="director" autocomplete="off" data-toggle="tooltip" data-placement="bottom" title="Movie Director">
+                                                        </div>
+
+                                                        <div class="input-group mg-b-pro-edt">
+                                                            <span class="input-group-addon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                                                            <input type="number" class="form-control" placeholder="Duration In Minutes" name="duration" id="duration" autocomplete="off" data-toggle="tooltip" data-placement="bottom" title="Movie Duration In Minutes">
+                                                        </div>
+
+                                                        <div class="input-group date">
+                                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                             <input type="date" class="form-control" name="release_date" id="release_date" data-toggle="tooltip" data-placement="bottom" title="Movie Release Date">
+                                                        </div>
+                                                        <br>
+
+                                                        <div class="input-group mg-b-pro-edt">
+                                                            <span class="input-group-addon"><i class="fa fa-info" aria-hidden="true"></i></span>
+                                                            <textarea name="information" class="form-control" placeholder="Movie Information" id="information" rows="2" data-toggle="tooltip" data-placement="bottom" title="Movie Information"></textarea>
+                                                        </div>
+
+                                                     
+<!-- 
+                                                        <div class="input-group mg-b-pro-edt">
+                                                            <div class="form-group">
+                                                                <label style="color:white; position: relative; top: 7px; font-size: 15px;">Status:</label>&nbsp;
+                                                                <label class="switch"> 
+                                                                    <input type="checkbox" name="status" id="status">
+                                                                    <span class="slider round"></span>
+                                                                </label>
+                                                            </div>
+                                                        </div> -->
+                                                                                       
 
 
                                             </div>
                                         </div>
+                                  
                                         <div class="row">
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <div class="text-center custom-pro-edt-ds">
-                                                    <button type="button" class="btn btn-ctl-bt waves-effect waves-light m-r-10">Save
-														</button>
-                                                    <button type="button" class="btn btn-ctl-bt waves-effect waves-light">Discard
-														</button>
+                                                    <input type="submit" class="btn btn-ctl-bt waves-effect waves-light m-r-10" name="add" value="Add" data-toggle="tooltip" data-placement="bottom" title="Add Movie">
+														
+                                                    <input type="reset" class="btn btn-ctl-bt waves-effect waves-light" name="reset" value="Reset" data-toggle="tooltip" data-placement="bottom" title="Clear Movie Information.">
+														
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     
-                                    
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -200,17 +159,94 @@
                 </div>
             </div>
         </div>
-       <!--  <div class="footer-copyright-area">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="footer-copy-right">
-                            <p>Copyright © 2018 <a href="https://colorlib.com/wp/templates/">Colorlib</a> All rights reserved.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
+    <script type="text/javascript">
+    /* ------------------------------------------------------------------------------
+*
+*  # Custom JS
+*
+* ---------------------------------------------------------------------------- */
+
+$(function () {
+
    
+    $("#add_form").validate({
+        rules: {
+          
+            image: 
+                {
+                    required: true
+                },
+            title: {
+                    required: true
+                    
+                },
+            category: {
+                    required: true
+                    
+                },
+             genres: {
+                required: true
+                
+            },
+             director: {
+                required: true
+                
+            },
+             duration: {
+                required: true,
+                number: true
+                
+            },
+             release_date: {
+                required: true,
+                date:true
+                
+            },
+            information: {
+                required: true
+                
+            }
+          
+        },
+        messages: {
+          
+           image: {
+                    required:"Please select image"
+           },
+            title: {
+                 required:"Please enter movie title."
+            },
+            category: {
+                 required:"Please select category."
+            },
+             genres: {
+                required: "Please select genres."
+                
+            },
+             director: {
+                required: "Please enter director name"
+                
+            },
+            duration: {
+                required: "Plesae enter duration of movie.",
+                number: "Please enter duration in minutes."
+                
+            },
+             release_date: {
+                required: "Please select release_date.",
+                date:"Please select valid date."
+                
+            },
+            information: {
+                required: "Please enetr Information."
+                
+            }
+          
+        }
+    });
+
+      
+});
+</script>
 
     

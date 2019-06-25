@@ -1,9 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Login_model extends MY_Model
+class Movie_model extends MY_Model
 {
-	protected $_table = 'admin';
+	protected $soft_delete = TRUE;
 
 }
 ?>

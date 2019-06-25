@@ -59,9 +59,19 @@
     <!-- responsive CSS
 		============================================ -->
     <link rel="stylesheet" href="<?php echo base_url('assets/')?>css/responsive.css">
+  <!-- extra CSS
+        ============================================ -->
+    <link href="<?php echo base_url('assets/')?>css/core.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo base_url('assets/')?>css/components.css" rel="stylesheet" type="text/css">
     <!-- modernizr JS
 		============================================ -->
     <script src="<?php echo base_url('assets/')?>js/vendor/modernizr-2.8.3.min.js"></script>
+     <!-- Toaster
+        ============================================ -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
 </head>
 
 <body>
@@ -251,6 +261,10 @@
     <!-- main JS
 		============================================ -->
     <script src="<?php echo base_url('assets/')?>js/main.js"></script>
+     <!-- validation
+        ============================================ -->
+    <script type="text/javascript" src="<?php echo base_url('assets')?>/js/jquery.validate.min.js"></script>
+
 </body>
 
 </html>
