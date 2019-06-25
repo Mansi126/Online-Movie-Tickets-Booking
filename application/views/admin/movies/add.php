@@ -1,6 +1,6 @@
 <style type="text/css" media="screen">
    
-   #info::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+   #information::-webkit-input-placeholder { /* Chrome/Opera/Safari */
         color: white;
     }
     .switch {
@@ -159,26 +159,23 @@
                                                     </div>
                                                     <br>
 
-            <div class="input-group mg-b-pro-edt">
-                <span class="input-group-addon"><i class="fa fa-info" aria-hidden="true"></i></span>
-                <textarea name="information" class="form-control" placeholder="Movie Information" id="info"></textarea>
-            </div>
+                                                    <div class="input-group mg-b-pro-edt">
+                                                        <span class="input-group-addon"><i class="fa fa-info" aria-hidden="true"></i></span>
+                                                        <textarea name="information" class="form-control" placeholder="Movie Information" id="information" rows="4"></textarea>
+                                                    </div>
 
-            <div class="input-group mg-b-pro-edt">
-                <span class="input-group-addon"><i class="icon nalika-user" aria-hidden="true"></i></span>
-                <input type="text" class="form-control" name="director" placeholder="Movie Director">
-            </div>
+                                                 
 
-            <div class="input-group mg-b-pro-edt">
-                <div class="form-group">
-                    <label style="color:white; position: relative; top: 7px; font-size: 15px;">Status:</label>&nbsp;
-                    <label class="switch"> 
-                        <input type="checkbox" name="status">
-                        <span class="slider round"></span>
-                    </label>
-                </div>
-            </div>
-                                           
+                                                    <div class="input-group mg-b-pro-edt">
+                                                        <div class="form-group">
+                                                            <label style="color:white; position: relative; top: 7px; font-size: 15px;">Status:</label>&nbsp;
+                                                            <label class="switch"> 
+                                                                <input type="checkbox" name="status" id="status">
+                                                                <span class="slider round"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                                                   
 
 
                                             </div>
