@@ -1,270 +1,206 @@
-<!doctype html>
-<html class="no-js" lang="en">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Movie Ticket | Admin Panel</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- favicon
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Movie Ticket | Admin Panel</title>
+	 <!-- favicon
 		============================================ -->
-    <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url('assets')?>/img/Movie-Tickets.png">
-    <!-- Google Fonts
-		============================================ -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
-    <!-- Bootstrap CSS
-		============================================ -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/')?>css/bootstrap.min.css">
-    <!-- Bootstrap CSS
-		============================================ -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/')?>css/font-awesome.min.css">
-	<!-- nalika Icon CSS
-		============================================ -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/')?>css/nalika-icon.css">
-    <!-- owl.carousel CSS
-		============================================ -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/')?>css/owl.carousel.css">
-    <link rel="stylesheet" href="<?php echo base_url('assets/')?>css/owl.theme.css">
-    <link rel="stylesheet" href="<?php echo base_url('assets/')?>css/owl.transitions.css">
-    <!-- animate CSS
-		============================================ -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/')?>css/animate.css">
-    <!-- normalize CSS
-		============================================ -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/')?>css/normalize.css">
-    <!-- meanmenu icon CSS
-		============================================ -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/')?>css/meanmenu.min.css">
-    <!-- main CSS
-		============================================ -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/')?>css/main.css">
-    <!-- morrisjs CSS
-		============================================ -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/')?>css/morrisjs/morris.css">
-    <!-- mCustomScrollbar CSS
-		============================================ -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/')?>css/scrollbar/jquery.mCustomScrollbar.min.css">
-    <!-- metisMenu CSS
-		============================================ -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/')?>css/metisMenu/metisMenu.min.css">
-    <link rel="stylesheet" href="<?php echo base_url('assets/')?>css/metisMenu/metisMenu-vertical.css">
-    <!-- calendar CSS
-		============================================ -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/')?>css/calendar/fullcalendar.min.css">
-    <link rel="stylesheet" href="<?php echo base_url('assets/')?>css/calendar/fullcalendar.print.min.css">
-    <!-- style CSS
-		============================================ -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/')?>style.css">
-    <!-- responsive CSS
-		============================================ -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/')?>css/responsive.css">
-  <!-- extra CSS
-        ============================================ -->
-    <link href="<?php echo base_url('assets/')?>css/core.css" rel="stylesheet" type="text/css">
-    <link href="<?php echo base_url('assets/')?>css/components.css" rel="stylesheet" type="text/css">
-    <!-- modernizr JS
-		============================================ -->
-    <script src="<?php echo base_url('assets/')?>js/vendor/modernizr-2.8.3.min.js"></script>
-     <!-- Toaster
-        ============================================ -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url('assets')?>/images/fm.jpg">
+	<!-- Global stylesheets -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+	<link href="<?php echo base_url('assets');?>/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+	<link href="<?php echo base_url('assets');?>/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="<?php echo base_url('assets');?>/css/core.css" rel="stylesheet" type="text/css">
+	<link href="<?php echo base_url('assets');?>/css/components.css" rel="stylesheet" type="text/css">
+	<link href="<?php echo base_url('assets');?>/css/colors.css" rel="stylesheet" type="text/css">
+	<!-- /global stylesheets -->
+
+	<!-- Core JS files -->
+	<script type="text/javascript" src="<?php echo base_url('assets');?>/js/plugins/loaders/pace.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url('assets');?>/js/core/libraries/jquery.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url('assets');?>/js/core/libraries/bootstrap.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url('assets');?>/js/plugins/loaders/blockui.min.js"></script>
+	<!-- /core JS files -->
+
+	<!-- Theme JS files -->
+	<script type="text/javascript" src="<?php echo base_url('assets');?>/js/plugins/visualization/d3/d3.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url('assets');?>/js/plugins/visualization/d3/d3_tooltip.js"></script>
+	<script type="text/javascript" src="<?php echo base_url('assets');?>/js/plugins/forms/styling/switchery.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url('assets');?>/js/plugins/forms/styling/uniform.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url('assets');?>/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+	<script type="text/javascript" src="<?php echo base_url('assets');?>/js/plugins/ui/moment/moment.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url('assets');?>/js/plugins/pickers/daterangepicker.js"></script>
+	<script type="text/javascript" src="<?php echo base_url('assets');?>/js/plugins/ui/nicescroll.min.js"></script>
+
+	<script type="text/javascript" src="<?php echo base_url('assets');?>/js/core/app.js"></script>
+	<script type="text/javascript" src="<?php echo base_url('assets');?>/js/pages/dashboard.js"></script>
+	<script type="text/javascript" src="<?php echo base_url('assets');?>/js/pages/layout_fixed_custom.js"></script>
+	<!-- /theme JS files -->
 
 </head>
 
-<body>
-    <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+<body class="navbar-top">
 
-    <div class="left-sidebar-pro">
-        <nav id="sidebar" class="">
-            <div class="sidebar-header">
-                <a href="index.html"><img class="main-logo" src="<?php echo base_url('assets')?>/img/Movie-Tickets.png" alt="" height="50" width="100"/></a>
-              <!--   <strong><img src="<?php echo base_url('assets')?>/img/logo/logosn.png" alt="" /></strong> -->
-            </div>
-			<div class="nalika-profile">
-				<div class="profile-dtl">
-	
-					<h2><?php $session_user = _useSession('admin');
-                            echo $session_user['name']; ?></h2>
-				</div>
+	<!-- Main navbar -->
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="index.html"><img src="<?php echo base_url('assets')?>/images/fm.jpg" alt=""></a>
+
+			<ul class="nav navbar-nav visible-xs-block">
+				<li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
+				<li><a class="sidebar-mobile-main-toggle"><i class="icon-paragraph-justify3"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="navbar-collapse collapse" id="navbar-mobile">
+			
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown language-switch">
+					<a class="dropdown-toggle" data-toggle="dropdown">
+						<img src="<?php echo base_url('assets');?>/images/flags/gb.png" class="position-left" alt="">
+						English
+						<span class="caret"></span>
+					</a>
+
+					<ul class="dropdown-menu">
+						<li><a class="deutsch"><img src="<?php echo base_url('assets');?>/images/flags/de.png" alt=""> Deutsch</a></li>
+						<li><a class="ukrainian"><img src="<?php echo base_url('assets');?>/images/flags/ua.png" alt=""> Українська</a></li>
+						<li><a class="english"><img src="<?php echo base_url('assets');?>/images/flags/gb.png" alt=""> English</a></li>
+						<li><a class="espana"><img src="<?php echo base_url('assets');?>/images/flags/es.png" alt=""> España</a></li>
+						<li><a class="russian"><img src="<?php echo base_url('assets');?>/images/flags/ru.png" alt=""> Русский</a></li>
+					</ul>
+				</li>
+
 				
+
+				<li class="dropdown dropdown-user">
+					<a class="dropdown-toggle" data-toggle="dropdown">
+						<img src="<?php echo base_url('assets');?>/images/placeholder.jpg" alt="">
+						<span>Victoria</span>
+						<i class="caret"></i>
+					</a>
+
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
+						
+					
+						<li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- /main navbar -->
+
+
+	<!-- Page container -->
+	<div class="page-container">
+
+		<!-- Page content -->
+		<div class="page-content">
+
+			<!-- Main sidebar -->
+			<div class="sidebar sidebar-main sidebar-fixed">
+				<div class="sidebar-content">
+
+					<!-- User menu -->
+					<div class="sidebar-user">
+						<div class="category-content">
+							<div class="media">
+								<a href="#" class="media-left"><img src="<?php echo base_url('assets');?>/images/placeholder.jpg" class="img-circle img-sm" alt=""></a>
+								<div class="media-body">
+									<span class="media-heading text-semibold">Victoria Baker</span>
+								
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<!-- /user menu -->
+
+
+					<!-- Main navigation -->
+					<div class="sidebar-category sidebar-category-visible">
+						<div class="category-content no-padding">
+							<ul class="navigation navigation-main navigation-accordion">
+
+								<!-- Main -->
+								<li class="navigation-header"><span>Main</span> <i class="icon-menu" title="Main pages"></i></li>
+								<li><a href="<?php echo base_url('admin/dashboard');?>"><i class="icon-home4"></i> <span>Dashboard</span></a></li>
+								
+							
+
+							</ul>
+						</div>
+					</div>
+					<!-- /main navigation -->
+
+				</div>
 			</div>
-            <div class="left-custom-menu-adp-wrap comment-scrollbar">
-                <nav class="sidebar-nav left-sidebar-menu-pro">
-                    <ul class="metismenu" id="menu1">
-                        <li class="active">
-                            <a class="" href="<?php echo base_url('admin/dashboard')?>">
-								   <i class="icon nalika-home icon-wrap"></i>
-								   <span >Dashboard</span>
-								</a>
-                           
-                        </li>
-                         <li class="active">
-                            <a class="" href="<?php echo base_url('admin/movies/')?>">
-                                  <i class=" fa fa-film icon-wrap" aria-hidden="true"></i>
-                                   <span >Movies</span>
-                                </a>
-                           
-                        </li>
-                       
-                    </ul>
-                </nav>
-            </div>
-        </nav>
-    </div>
-    <!-- Start Welcome area -->
-    <div class="all-content-wrapper">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="logo-pro">
-                        <a href="<?php echo base_url('assets/')?>index.html"><img class="main-logo" src="<?php echo base_url('assets/')?>img/logo/logo.png" alt="" /></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="header-advance-area">
-            <div class="header-top-area">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="header-top-wraper">
-                                <div class="row">
-                                  
-                                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 pull-right">
-                                        <div class="header-right-info">
-                                            <ul class="nav navbar-nav mai-top-nav header-right-menu">
-                                              
-                                                <li class="nav-item">
-                                                    <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
-															<i class="icon nalika-user"></i>
-															<span class="admin-name"><?php  echo $session_user['name']; ?></span>
-															<i class="icon nalika-down-arrow nalika-angle-dw"></i>
-														</a>
-                                                    <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
-                                                     
-                                                        <li><a href="#"><span class="icon nalika-user author-log-ic"></span> My Profile</a>
-                                                        </li>
-                                                       
-                                                        <li><a href="<?php echo base_url('admin/login/logout')?>"><span class="icon nalika-unlocked author-log-ic"></span> Log Out</a>
-                                                        </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Mobile Menu end -->
-        <div class="breadcome-area">
-            <div class="container-fluid">
-                <div class="row">
-                   <!--      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="breadcome-list">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                        <div class="breadcomb-wp">
-                                            <div class="breadcomb-icon">
-                                                <i class="icon nalika-home"></i>
-                                            </div>
-                                            <div class="breadcomb-ctn">
-                                                <h2>Dashboard</h2>
-                                                <p>Welcome <?php  echo $session_user['name']; ?></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                        <div class="breadcomb-report">
-                                            <button data-toggle="tooltip" data-placement="left" title="Download Report" class="btn"><i class="icon nalika-download"></i></button>
-                                        </div>
-                                    </div> 
-                                </div>
-                            </div>
-                        </div> -->
-                    </div>
-            </div>
-        </div>
-    </div>
+			<!-- /main sidebar -->
 
 
-    <?php  
+			<!-- Main content -->
+			<div class="content-wrapper">
+
+				<!-- Page header -->
+				<div class="page-header page-header-default">
+					<div class="page-header-content">
+						<div class="page-title">
+							<h4><i class="icon-arrow-left52 position-left"></i> <span class="text-semibold">Home</span> - Dashboard</h4>
+						</div>
+
+					
+					</div>
+
+					<div class="breadcrumb-line">
+						<ul class="breadcrumb">
+							<li><a href="<?php echo base_url('admin/dashboard');?>"><i class="icon-home2 position-left"></i> Home</a></li>
+							<li class="active">Dashboard</li>
+						</ul>
+
+						
+					</div>
+				</div>
+				<!-- /page header -->
+
+
+				<!-- Content area -->
+				<div class="content">
+
+<?php  
 
             if(isset($contents))
             {
                    echo $contents;
             }
          
-  ?>
+ ?>
+							
+							
+				</div>
+					<!-- /dashboard content -->
 
 
+					<!-- Footer -->
+				<!-- 	<div class="footer text-muted">
+						&copy; 2015. <a href="#">Limitless Web App Kit</a> by <a href="http://themeforest.net/user/Kopyov" target="_blank">Eugene Kopyov</a>
+					</div> -->
+					<!-- /footer -->
 
-</div>
-    <!-- jquery
-		============================================ -->
-    <script src="<?php echo base_url('assets/')?>js/vendor/jquery-1.12.4.min.js"></script>
-    <!-- bootstrap JS
-		============================================ -->
-    <script src="<?php echo base_url('assets/')?>js/bootstrap.min.js"></script>
-    <!-- wow JS
-		============================================ -->
-    <script src="<?php echo base_url('assets/')?>js/wow.min.js"></script>
-    <!-- price-slider JS
-		============================================ -->
-    <script src="<?php echo base_url('assets/')?>js/jquery-price-slider.js"></script>
-    <!-- meanmenu JS
-		============================================ -->
-    <script src="<?php echo base_url('assets/')?>js/jquery.meanmenu.js"></script>
-    <!-- owl.carousel JS
-		============================================ -->
-    <script src="<?php echo base_url('assets/')?>js/owl.carousel.min.js"></script>
-    <!-- sticky JS
-		============================================ -->
-    <script src="<?php echo base_url('assets/')?>js/jquery.sticky.js"></script>
-    <!-- scrollUp JS
-		============================================ -->
-    <script src="<?php echo base_url('assets/')?>js/jquery.scrollUp.min.js"></script>
-    <!-- mCustomScrollbar JS
-		============================================ -->
-    <script src="<?php echo base_url('assets/')?>js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="<?php echo base_url('assets/')?>js/scrollbar/mCustomScrollbar-active.js"></script>
-    <!-- metisMenu JS
-		============================================ -->
-    <script src="<?php echo base_url('assets/')?>js/metisMenu/metisMenu.min.js"></script>
-    <script src="<?php echo base_url('assets/')?>js/metisMenu/metisMenu-active.js"></script>
-    <!-- sparkline JS
-		============================================ -->
-    <script src="<?php echo base_url('assets/')?>js/sparkline/jquery.sparkline.min.js"></script>
-    <script src="<?php echo base_url('assets/')?>js/sparkline/jquery.charts-sparkline.js"></script>
-    <!-- calendar JS
-		============================================ -->
-    <script src="<?php echo base_url('assets/')?>js/calendar/moment.min.js"></script>
-    <script src="<?php echo base_url('assets/')?>js/calendar/fullcalendar.min.js"></script>
-    <script src="<?php echo base_url('assets/')?>js/calendar/fullcalendar-active.js"></script>
-	<!-- float JS
-		============================================ -->
-    <script src="<?php echo base_url('assets/')?>js/flot/jquery.flot.js"></script>
-    <script src="<?php echo base_url('assets/')?>js/flot/jquery.flot.resize.js"></script>
-    <script src="<?php echo base_url('assets/')?>js/flot/curvedLines.js"></script>
-    <script src="<?php echo base_url('assets/')?>js/flot/flot-active.js"></script>
-    <!-- plugins JS
-		============================================ -->
-    <script src="<?php echo base_url('assets/')?>js/plugins.js"></script>
-    <!-- main JS
-		============================================ -->
-    <script src="<?php echo base_url('assets/')?>js/main.js"></script>
-     <!-- validation
-        ============================================ -->
-    <script type="text/javascript" src="<?php echo base_url('assets')?>/js/jquery.validate.min.js"></script>
+				</div>
+				<!-- /content area -->
+
+			</div>
+			<!-- /main content -->
+
+		</div>
+		<!-- /page content -->
+
+	</div>
+	<!-- /page container -->
 
 </body>
-
 </html>

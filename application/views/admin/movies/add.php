@@ -1,3 +1,27 @@
+    <!-- Global stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+  
+   
+    <link href="<?php echo base_url('asseets') ?>/css/core.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo base_url('asseets') ?>/css/components.css" rel="stylesheet" type="text/css">
+
+    <!-- /global stylesheets -->
+
+    <!-- Core JS files -->
+    <script type="text/javascript" src="<?php echo base_url('asseets') ?>/js/plugins/loaders/pace.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url('asseets') ?>/js/core/libraries/jquery.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url('asseets') ?>/js/core/libraries/bootstrap.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url('asseets') ?>/js/plugins/loaders/blockui.min.js"></script>
+    <!-- /core JS files -->
+
+    <!-- Theme JS files -->
+    <script type="text/javascript" src="<?php echo base_url('asseets') ?>/js/plugins/forms/styling/uniform.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url('asseets') ?>/js/plugins/notifications/pnotify.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url('asseets') ?>/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+
+    <script type="text/javascript" src="<?php echo base_url('asseets') ?>/js/core/app.js"></script>
+    <script type="text/javascript" src="<?php echo base_url('asseets') ?>/js/pages/form_multiselect.js"></script>
+    <!-- /theme JS files -->
 <style type="text/css" media="screen">
    
    #information::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -79,6 +103,22 @@
                                                             </select>
                                                         </div>
                                                         <br>
+
+                                                 <!-- Select All and filtering options -->
+                                    <div class="form-group">
+                                        <label><span class="text-semibold">Select All</span> and <span class="text-semibold">Filtering</span> options</label>
+                                        <div class="multi-select-full">
+                                            <select class="multiselect-select-all-filtering" multiple="multiple">
+                                                <option value="cheese">Cheese</option>
+                                                <option value="tomatoes">Tomatoes</option>
+                                                <option value="mozarella">Mozzarella</option>
+                                                <option value="mushrooms">Mushrooms</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!-- /select All and filtering options -->
+
+                                    <br>
                                                          <div class="input-group">
                                                              <span class="input-group-addon"><i class="fa fa-star-o" aria-hidden="true"></i></span>
                                                             <select name="genres" class="form-control pro-edt-select form-control-primary" data-toggle="tooltip" data-placement="bottom" title="Select Movie Geners">
