@@ -7,9 +7,13 @@
 	<title>Movie Ticket | Admin Panel</title>
 	 <!-- favicon
 		============================================ -->
-    <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url('assets')?>/images/fm.jpg">
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url('assets')?>/images/final_movie.jpg">
 	<!-- Global stylesheets -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+	 <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="<?php echo base_url('assets/')?>css/font-awesome.min.css">
+
 	<link href="<?php echo base_url('assets');?>/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
 	<link href="<?php echo base_url('assets');?>/css/bootstrap.css" rel="stylesheet" type="text/css">
 	<link href="<?php echo base_url('assets');?>/css/core.css" rel="stylesheet" type="text/css">
@@ -39,6 +43,12 @@
 	<script type="text/javascript" src="<?php echo base_url('assets');?>/js/pages/layout_fixed_custom.js"></script>
 	<!-- /theme JS files -->
 
+<style type="text/css">
+	.bgcolor{
+		background-color: #E5E5E5;
+	}
+	
+</style>
 </head>
 
 <body class="navbar-top">
@@ -46,12 +56,8 @@
 	<!-- Main navbar -->
 	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="index.html"><img src="<?php echo base_url('assets')?>/images/fm.jpg" alt=""></a>
+			<a class="navbar-brand" href="index.html"><img src="<?php echo base_url('assets')?>/images/final_movie.jpg" alt="" height="100" width="25" style="margin-top: 5px;"></a><div style="font-weight: bold;padding-top: 10px;font-size: 20px;">Movies</div>
 
-			<ul class="nav navbar-nav visible-xs-block">
-				<li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
-				<li><a class="sidebar-mobile-main-toggle"><i class="icon-paragraph-justify3"></i></a></li>
-			</ul>
 		</div>
 
 		<div class="navbar-collapse collapse" id="navbar-mobile">
@@ -78,7 +84,8 @@
 				<li class="dropdown dropdown-user">
 					<a class="dropdown-toggle" data-toggle="dropdown">
 						<img src="<?php echo base_url('assets');?>/images/placeholder.jpg" alt="">
-						<span>Victoria</span>
+						<span><?php $session_user = _useSession('admin');
+                            echo $session_user['name']; ?></span>
 						<i class="caret"></i>
 					</a>
 
@@ -86,7 +93,7 @@
 						<li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
 						
 					
-						<li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
+						<li><a href="<?php echo base_url('admin/login/logout'); ?>"><i class="icon-switch2"></i> Logout</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -111,7 +118,8 @@
 							<div class="media">
 								<a href="#" class="media-left"><img src="<?php echo base_url('assets');?>/images/placeholder.jpg" class="img-circle img-sm" alt=""></a>
 								<div class="media-body">
-									<span class="media-heading text-semibold">Victoria Baker</span>
+									<span class="media-heading text-semibold"><?php 
+                                     echo $session_user['name']; ?></span>
 								
 								</div>
 
@@ -129,6 +137,7 @@
 								<!-- Main -->
 								<li class="navigation-header"><span>Main</span> <i class="icon-menu" title="Main pages"></i></li>
 								<li><a href="<?php echo base_url('admin/dashboard');?>"><i class="icon-home4"></i> <span>Dashboard</span></a></li>
+								<li><a href="<?php echo base_url('admin/movies');?>"><i class=" fa fa-film" aria-hidden="true"></i> <span>Movies</span></a></li>
 								
 							
 
@@ -147,7 +156,7 @@
 
 				<!-- Page header -->
 				<div class="page-header page-header-default">
-					<div class="page-header-content">
+					<div class="page-header-content bgcolor">
 						<div class="page-title">
 							<h4><i class="icon-arrow-left52 position-left"></i> <span class="text-semibold">Home</span> - Dashboard</h4>
 						</div>
